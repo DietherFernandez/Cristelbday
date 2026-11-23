@@ -372,68 +372,104 @@
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="storybook-card rounded-3xl p-5 text-center hover:-translate-y-1.5 transition-transform">
-                    <div class="relative overflow-hidden w-full h-44 rounded-2xl bg-gradient-to-br from-princessPink-100 to-skyMagic-100 flex flex-col items-center justify-center mb-4 border-2 border-white shadow-inner">
-                        <span class="text-4xl mb-6">🎀</span>
-                        <img
-                            src="images/months/month-1-3.jpg"
-                            alt="Cristel Joy Month 1 to 3"
-                            class="absolute inset-0 w-full h-full object-cover"
-                            onerror="this.style.display='none'"
-                        >
-                        <span class="absolute bottom-2 left-1/2 -translate-x-1/2 z-10 whitespace-nowrap text-xs font-bold text-princessPink-600 bg-white/90 backdrop-blur-sm px-3 py-0.5 rounded-full shadow-sm">Month 1 – 3</span>
+                <!-- Month 1 - 3 Collage Card -->
+                <div class="storybook-card rounded-3xl p-4 sm:p-5 text-center hover:-translate-y-1.5 transition-transform">
+                    <div class="grid grid-cols-2 grid-rows-2 gap-1.5 w-full h-56 rounded-2xl p-1.5 bg-gradient-to-br from-princessPink-100 to-skyMagic-100 border-2 border-white shadow-inner mb-3.5">
+                        <div class="milestone-photo-slot col-span-2 row-span-1 relative overflow-hidden rounded-xl bg-white/70 flex items-center justify-center group cursor-pointer" data-src="images/months/month-1-3/month1.jpg" data-caption="Month 1 • Our Sweet Baby Girl">
+                            <span class="text-2xl opacity-75">🎀</span>
+                            <img src="images/months/month-1-3/month1.jpg" alt="Cristel Joy Month 1" class="milestone-img absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.style.display='none'; this.parentElement.dataset.missing='true'; this.parentElement.classList.remove('cursor-pointer');">
+                            <span class="absolute top-1.5 left-1.5 z-10 text-[10px] font-bold text-princessPink-600 bg-white/90 backdrop-blur-sm px-2 py-0.5 rounded-full shadow-sm">Month 1</span>
+                        </div>
+                        <div class="milestone-photo-slot relative overflow-hidden rounded-xl bg-white/70 flex items-center justify-center group cursor-pointer" data-src="images/months/month-1-3/month2.jpg" data-caption="Month 2 • Our Sweet Baby Girl">
+                            <span class="text-xl opacity-75">🌸</span>
+                            <img src="images/months/month-1-3/month2.jpg" alt="Cristel Joy Month 2" class="milestone-img absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.style.display='none'; this.parentElement.dataset.missing='true'; this.parentElement.classList.remove('cursor-pointer');">
+                            <span class="absolute bottom-1 left-1 z-10 text-[10px] font-bold text-princessPink-600 bg-white/90 backdrop-blur-sm px-1.5 py-0.5 rounded-full shadow-sm">M2</span>
+                        </div>
+                        <div class="milestone-photo-slot relative overflow-hidden rounded-xl bg-white/70 flex items-center justify-center group cursor-pointer" data-src="images/months/month-1-3/month3.jpg" data-caption="Month 3 • Our Sweet Baby Girl">
+                            <span class="text-xl opacity-75">✨</span>
+                            <img src="images/months/month-1-3/month3.jpg" alt="Cristel Joy Month 3" class="milestone-img absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.style.display='none'; this.parentElement.dataset.missing='true'; this.parentElement.classList.remove('cursor-pointer');">
+                            <span class="absolute bottom-1 left-1 z-10 text-[10px] font-bold text-princessPink-600 bg-white/90 backdrop-blur-sm px-1.5 py-0.5 rounded-full shadow-sm">M3</span>
+                        </div>
                     </div>
+                    <span class="inline-block text-[11px] font-bold text-princessPink-600 bg-princessPink-50 border border-princessPink-200 px-3 py-0.5 rounded-full mb-1.5">Month 1 – 3</span>
                     <h3 contenteditable="true" class="font-bold text-base text-slate-800">Our Sweet Baby Girl</h3>
                     <p contenteditable="true" class="text-xs text-slate-600 mt-1.5">
                         Tiny yawns, bright curious eyes, and melting everyone's hearts with her first sweet giggle!
                     </p>
                 </div>
 
-                <div class="storybook-card rounded-3xl p-5 text-center hover:-translate-y-1.5 transition-transform">
-                    <div class="relative overflow-hidden w-full h-44 rounded-2xl bg-gradient-to-br from-skyMagic-100 to-royalGold-100 flex flex-col items-center justify-center mb-4 border-2 border-white shadow-inner">
-                        <span class="text-4xl mb-6">🧸</span>
-                        <img
-                            src="images/months/month-4-6.jpg"
-                            alt="Cristel Joy Month 4 to 6"
-                            class="absolute inset-0 w-full h-full object-cover"
-                            onerror="this.style.display='none'"
-                        >
-                        <span class="absolute bottom-2 left-1/2 -translate-x-1/2 z-10 whitespace-nowrap text-xs font-bold text-skyMagic-600 bg-white/90 backdrop-blur-sm px-3 py-0.5 rounded-full shadow-sm">Month 4 – 6</span>
+                <!-- Month 4 - 6 Collage Card -->
+                <div class="storybook-card rounded-3xl p-4 sm:p-5 text-center hover:-translate-y-1.5 transition-transform">
+                    <div class="grid grid-cols-2 grid-rows-2 gap-1.5 w-full h-56 rounded-2xl p-1.5 bg-gradient-to-br from-skyMagic-100 to-royalGold-100 border-2 border-white shadow-inner mb-3.5">
+                        <div class="milestone-photo-slot col-span-2 row-span-1 relative overflow-hidden rounded-xl bg-white/70 flex items-center justify-center group cursor-pointer" data-src="images/months/month-4-6/month4.jpg" data-caption="Month 4 • Sitting Pretty & First Bites">
+                            <span class="text-2xl opacity-75">🧸</span>
+                            <img src="images/months/month-4-6/month4.jpg" alt="Cristel Joy Month 4" class="milestone-img absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.style.display='none'; this.parentElement.dataset.missing='true'; this.parentElement.classList.remove('cursor-pointer');">
+                            <span class="absolute top-1.5 left-1.5 z-10 text-[10px] font-bold text-skyMagic-600 bg-white/90 backdrop-blur-sm px-2 py-0.5 rounded-full shadow-sm">Month 4</span>
+                        </div>
+                        <div class="milestone-photo-slot relative overflow-hidden rounded-xl bg-white/70 flex items-center justify-center group cursor-pointer" data-src="images/months/month-4-6/month5.jpg" data-caption="Month 5 • Sitting Pretty & First Bites">
+                            <span class="text-xl opacity-75">🍼</span>
+                            <img src="images/months/month-4-6/month5.jpg" alt="Cristel Joy Month 5" class="milestone-img absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.style.display='none'; this.parentElement.dataset.missing='true'; this.parentElement.classList.remove('cursor-pointer');">
+                            <span class="absolute bottom-1 left-1 z-10 text-[10px] font-bold text-skyMagic-600 bg-white/90 backdrop-blur-sm px-1.5 py-0.5 rounded-full shadow-sm">M5</span>
+                        </div>
+                        <div class="milestone-photo-slot relative overflow-hidden rounded-xl bg-white/70 flex items-center justify-center group cursor-pointer" data-src="images/months/month-4-6/month6.jpg" data-caption="Month 6 • Sitting Pretty & First Bites">
+                            <span class="text-xl opacity-75">🍓</span>
+                            <img src="images/months/month-4-6/month6.jpg" alt="Cristel Joy Month 6" class="milestone-img absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.style.display='none'; this.parentElement.dataset.missing='true'; this.parentElement.classList.remove('cursor-pointer');">
+                            <span class="absolute bottom-1 left-1 z-10 text-[10px] font-bold text-skyMagic-600 bg-white/90 backdrop-blur-sm px-1.5 py-0.5 rounded-full shadow-sm">M6</span>
+                        </div>
                     </div>
+                    <span class="inline-block text-[11px] font-bold text-skyMagic-600 bg-skyMagic-50 border border-skyMagic-200 px-3 py-0.5 rounded-full mb-1.5">Month 4 – 6</span>
                     <h3 contenteditable="true" class="font-bold text-base text-slate-800">Sitting Pretty & First Bites</h3>
                     <p contenteditable="true" class="text-xs text-slate-600 mt-1.5">
                         Sitting up like a little princess in her cute ribbons and tasting her very first yummy baby food!
                     </p>
                 </div>
 
-                <div class="storybook-card rounded-3xl p-5 text-center hover:-translate-y-1.5 transition-transform">
-                    <div class="relative overflow-hidden w-full h-44 rounded-2xl bg-gradient-to-br from-royalGold-100 to-princessPink-100 flex flex-col items-center justify-center mb-4 border-2 border-white shadow-inner">
-                        <span class="text-4xl mb-6">👣</span>
-                        <img
-                            src="images/months/month-7-9.jpg"
-                            alt="Cristel Joy Month 7 to 9"
-                            class="absolute inset-0 w-full h-full object-cover"
-                            onerror="this.style.display='none'"
-                        >
-                        <span class="absolute bottom-2 left-1/2 -translate-x-1/2 z-10 whitespace-nowrap text-xs font-bold text-royalGold-600 bg-white/90 backdrop-blur-sm px-3 py-0.5 rounded-full shadow-sm">Month 7 – 9</span>
+                <!-- Month 7 - 9 Collage Card -->
+                <div class="storybook-card rounded-3xl p-4 sm:p-5 text-center hover:-translate-y-1.5 transition-transform">
+                    <div class="grid grid-cols-2 grid-rows-2 gap-1.5 w-full h-56 rounded-2xl p-1.5 bg-gradient-to-br from-royalGold-100 to-princessPink-100 border-2 border-white shadow-inner mb-3.5">
+                        <div class="milestone-photo-slot col-span-2 row-span-1 relative overflow-hidden rounded-xl bg-white/70 flex items-center justify-center group cursor-pointer" data-src="images/months/month-7-9/month7.jpg" data-caption="Month 7 • Crawling & Clapping">
+                            <span class="text-2xl opacity-75">👣</span>
+                            <img src="images/months/month-7-9/month7.jpg" alt="Cristel Joy Month 7" class="milestone-img absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.style.display='none'; this.parentElement.dataset.missing='true'; this.parentElement.classList.remove('cursor-pointer');">
+                            <span class="absolute top-1.5 left-1.5 z-10 text-[10px] font-bold text-royalGold-600 bg-white/90 backdrop-blur-sm px-2 py-0.5 rounded-full shadow-sm">Month 7</span>
+                        </div>
+                        <div class="milestone-photo-slot relative overflow-hidden rounded-xl bg-white/70 flex items-center justify-center group cursor-pointer" data-src="images/months/month-7-9/month8.jpg" data-caption="Month 8 • Crawling & Clapping">
+                            <span class="text-xl opacity-75">👏</span>
+                            <img src="images/months/month-7-9/month8.jpg" alt="Cristel Joy Month 8" class="milestone-img absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.style.display='none'; this.parentElement.dataset.missing='true'; this.parentElement.classList.remove('cursor-pointer');">
+                            <span class="absolute bottom-1 left-1 z-10 text-[10px] font-bold text-royalGold-600 bg-white/90 backdrop-blur-sm px-1.5 py-0.5 rounded-full shadow-sm">M8</span>
+                        </div>
+                        <div class="milestone-photo-slot relative overflow-hidden rounded-xl bg-white/70 flex items-center justify-center group cursor-pointer" data-src="images/months/month-7-9/month9.jpg" data-caption="Month 9 • Crawling & Clapping">
+                            <span class="text-xl opacity-75">🎵</span>
+                            <img src="images/months/month-7-9/month9.jpg" alt="Cristel Joy Month 9" class="milestone-img absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.style.display='none'; this.parentElement.dataset.missing='true'; this.parentElement.classList.remove('cursor-pointer');">
+                            <span class="absolute bottom-1 left-1 z-10 text-[10px] font-bold text-royalGold-600 bg-white/90 backdrop-blur-sm px-1.5 py-0.5 rounded-full shadow-sm">M9</span>
+                        </div>
                     </div>
+                    <span class="inline-block text-[11px] font-bold text-royalGold-600 bg-royalGold-100/70 border border-royalGold-200 px-3 py-0.5 rounded-full mb-1.5">Month 7 – 9</span>
                     <h3 contenteditable="true" class="font-bold text-base text-slate-800">Crawling & Clapping</h3>
                     <p contenteditable="true" class="text-xs text-slate-600 mt-1.5">
                         Zooming around the house, waving bye-bye, and dancing to her favorite princess songs!
                     </p>
                 </div>
 
-                <div class="storybook-card rounded-3xl p-5 text-center hover:-translate-y-1.5 transition-transform">
-                    <div class="relative overflow-hidden w-full h-44 rounded-2xl bg-gradient-to-br from-princessPink-200 to-royalGold-100 flex flex-col items-center justify-center mb-4 border-2 border-white shadow-inner">
-                        <span class="text-4xl mb-6">👸</span>
-                        <img
-                            src="images/months/month-10-12.jpg"
-                            alt="Cristel Joy Month 10 to 12"
-                            class="absolute inset-0 w-full h-full object-cover"
-                            onerror="this.style.display='none'"
-                        >
-                        <span class="absolute bottom-2 left-1/2 -translate-x-1/2 z-10 whitespace-nowrap text-xs font-bold text-princessPink-600 bg-white/90 backdrop-blur-sm px-3 py-0.5 rounded-full shadow-sm">Month 10 – 12</span>
+                <!-- Month 10 - 12 Collage Card -->
+                <div class="storybook-card rounded-3xl p-4 sm:p-5 text-center hover:-translate-y-1.5 transition-transform">
+                    <div class="grid grid-cols-2 grid-rows-2 gap-1.5 w-full h-56 rounded-2xl p-1.5 bg-gradient-to-br from-princessPink-200 to-royalGold-100 border-2 border-white shadow-inner mb-3.5">
+                        <div class="milestone-photo-slot col-span-2 row-span-1 relative overflow-hidden rounded-xl bg-white/70 flex items-center justify-center group cursor-pointer" data-src="images/months/month-10-12/month10.jpg" data-caption="Month 10 • Birthday Girl Turns ONE!">
+                            <span class="text-2xl opacity-75">👸</span>
+                            <img src="images/months/month-10-12/month10.jpg" alt="Cristel Joy Month 10" class="milestone-img absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.style.display='none'; this.parentElement.dataset.missing='true'; this.parentElement.classList.remove('cursor-pointer');">
+                            <span class="absolute top-1.5 left-1.5 z-10 text-[10px] font-bold text-princessPink-600 bg-white/90 backdrop-blur-sm px-2 py-0.5 rounded-full shadow-sm">Month 10</span>
+                        </div>
+                        <div class="milestone-photo-slot relative overflow-hidden rounded-xl bg-white/70 flex items-center justify-center group cursor-pointer" data-src="images/months/month-10-12/month11.jpg" data-caption="Month 11 • Birthday Girl Turns ONE!">
+                            <span class="text-xl opacity-75">👑</span>
+                            <img src="images/months/month-10-12/month11.jpg" alt="Cristel Joy Month 11" class="milestone-img absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.style.display='none'; this.parentElement.dataset.missing='true'; this.parentElement.classList.remove('cursor-pointer');">
+                            <span class="absolute bottom-1 left-1 z-10 text-[10px] font-bold text-princessPink-600 bg-white/90 backdrop-blur-sm px-1.5 py-0.5 rounded-full shadow-sm">M11</span>
+                        </div>
+                        <div class="milestone-photo-slot relative overflow-hidden rounded-xl bg-white/70 flex items-center justify-center group cursor-pointer" data-src="images/months/month-10-12/month12.jpg" data-caption="Month 12 • Birthday Girl Turns ONE!">
+                            <span class="text-xl opacity-75">🎂</span>
+                            <img src="images/months/month-10-12/month12.jpg" alt="Cristel Joy Month 12" class="milestone-img absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.style.display='none'; this.parentElement.dataset.missing='true'; this.parentElement.classList.remove('cursor-pointer');">
+                            <span class="absolute bottom-1 left-1 z-10 text-[10px] font-bold text-princessPink-600 bg-white/90 backdrop-blur-sm px-1.5 py-0.5 rounded-full shadow-sm">M12</span>
+                        </div>
                     </div>
+                    <span class="inline-block text-[11px] font-bold text-princessPink-600 bg-princessPink-50 border border-princessPink-200 px-3 py-0.5 rounded-full mb-1.5">Month 10 – 12</span>
                     <h3 contenteditable="true" class="font-bold text-base text-slate-800">Birthday Girl Turns ONE!</h3>
                     <p contenteditable="true" class="text-xs text-slate-600 mt-1.5">
                         Taking tiny steps, saying Mama & Papa, and ready to wear her pink gown for her 1st birthday!
@@ -710,6 +746,47 @@
         </div>
     </div>
 
+    <!-- MILESTONE MONTHLY GALLERY LIGHTBOX MODAL -->
+    <div id="milestone-lightbox" class="fixed inset-0 z-50 hidden bg-slate-900/90 backdrop-blur-md flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Cristel Joy Monthly Milestone Photo">
+        <div class="relative max-w-4xl w-full flex flex-col items-center">
+            <div class="w-full flex items-center justify-between mb-3 gap-2">
+                <span id="milestone-lightbox-caption" class="px-4 py-1.5 rounded-full bg-white/95 text-princessPink-600 font-bold text-xs sm:text-sm shadow"></span>
+                <button
+                    type="button"
+                    id="close-milestone-lightbox-btn"
+                    class="px-4 py-2 rounded-full bg-white text-princessPink-600 font-bold text-xs sm:text-sm shadow-lg hover:bg-princessPink-50 flex items-center space-x-1.5"
+                >
+                    <i class="fa-solid fa-xmark"></i>
+                    <span>Close</span>
+                </button>
+            </div>
+            <div class="relative w-full flex items-center justify-center">
+                <button
+                    type="button"
+                    id="milestone-prev-btn"
+                    aria-label="Previous photo"
+                    class="absolute left-1 sm:left-2 z-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/90 hover:bg-white text-princessPink-600 shadow-lg flex items-center justify-center transition-transform hover:scale-105"
+                >
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <img
+                    id="milestone-lightbox-img"
+                    src=""
+                    alt="Cristel Joy Monthly Milestone"
+                    class="max-h-[78vh] max-w-full w-auto rounded-2xl border-4 border-white shadow-2xl object-contain"
+                >
+                <button
+                    type="button"
+                    id="milestone-next-btn"
+                    aria-label="Next photo"
+                    class="absolute right-1 sm:right-2 z-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/90 hover:bg-white text-princessPink-600 shadow-lg flex items-center justify-center transition-transform hover:scale-105"
+                >
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- FOOTER -->
     <footer class="bg-white/90 backdrop-blur-md border-t-2 border-princessPink-200 py-10 px-4 text-center relative z-10">
         <div class="max-w-3xl mx-auto">
@@ -772,6 +849,62 @@
                     if (e.target === lightbox) {
                         lightbox.classList.add('hidden');
                     }
+                });
+            }
+
+            // 0b. Monthly Milestones Collage Lightbox Gallery
+            const milestoneLightbox = document.getElementById('milestone-lightbox');
+            const milestoneLightboxImg = document.getElementById('milestone-lightbox-img');
+            const milestoneLightboxCaption = document.getElementById('milestone-lightbox-caption');
+            const closeMilestoneLightboxBtn = document.getElementById('close-milestone-lightbox-btn');
+            const milestonePrevBtn = document.getElementById('milestone-prev-btn');
+            const milestoneNextBtn = document.getElementById('milestone-next-btn');
+            const milestoneSlots = Array.from(document.querySelectorAll('.milestone-photo-slot'));
+            let currentMilestoneIndex = 0;
+
+            function getAvailableMilestoneSlots() {
+                return milestoneSlots.filter((slot) => {
+                    const img = slot.querySelector('.milestone-img');
+                    return slot.dataset.missing !== 'true' && img && img.complete && img.naturalWidth > 0;
+                });
+            }
+
+            function renderMilestoneLightbox(index) {
+                const available = getAvailableMilestoneSlots();
+                if (!available.length) return;
+                currentMilestoneIndex = (index + available.length) % available.length;
+                const activeSlot = available[currentMilestoneIndex];
+                milestoneLightboxImg.src = activeSlot.dataset.src;
+                milestoneLightboxCaption.textContent = `${activeSlot.dataset.caption} (${currentMilestoneIndex + 1}/${available.length})`;
+                const showNav = available.length > 1;
+                milestonePrevBtn.classList.toggle('hidden', !showNav);
+                milestoneNextBtn.classList.toggle('hidden', !showNav);
+            }
+
+            if (milestoneLightbox && milestoneLightboxImg && closeMilestoneLightboxBtn) {
+                milestoneSlots.forEach((slot) => {
+                    slot.addEventListener('click', () => {
+                        const available = getAvailableMilestoneSlots();
+                        const idx = available.indexOf(slot);
+                        if (idx === -1) return;
+                        renderMilestoneLightbox(idx);
+                        milestoneLightbox.classList.remove('hidden');
+                    });
+                });
+
+                milestonePrevBtn.addEventListener('click', () => renderMilestoneLightbox(currentMilestoneIndex - 1));
+                milestoneNextBtn.addEventListener('click', () => renderMilestoneLightbox(currentMilestoneIndex + 1));
+                closeMilestoneLightboxBtn.addEventListener('click', () => milestoneLightbox.classList.add('hidden'));
+                milestoneLightbox.addEventListener('click', (e) => {
+                    if (e.target === milestoneLightbox) {
+                        milestoneLightbox.classList.add('hidden');
+                    }
+                });
+                document.addEventListener('keydown', (e) => {
+                    if (milestoneLightbox.classList.contains('hidden')) return;
+                    if (e.key === 'Escape') milestoneLightbox.classList.add('hidden');
+                    if (e.key === 'ArrowLeft') renderMilestoneLightbox(currentMilestoneIndex - 1);
+                    if (e.key === 'ArrowRight') renderMilestoneLightbox(currentMilestoneIndex + 1);
                 });
             }
 
