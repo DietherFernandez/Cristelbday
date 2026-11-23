@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cristel Joy's Christening & 1st Birthday</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Fairytale Cursive & Playful Kids Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Great+Vibes&family=Pacifico&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Royal Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Tone.js for Magical Fairytale Music Box Audio -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'script': ['"Great Vibes"', 'cursive'],
+                        'display': ['"Pacifico"', 'cursive'],
+                        'sans': ['"Fredoka"', 'sans-serif'],
+                    },
+                    colors: {
+                        princessPink: {
+                            50: '#fff0f6',
+                            100: '#ffe3ee',
+                            200: '#ffc6de',
+                            300: '#ff9ac3',
+                            400: '#ff5c9e',
+                            500: '#f52e7e',
+                            600: '#d61460',
+                        },
+                        skyMagic: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                        },
+                        royalGold: {
+                            100: '#fef9c3',
+                            200: '#fef08a',
+                            300: '#fde047',
+                            400: '#facc15',
+                            500: '#eab308',
+                            600: '#ca8a04',
+                        },
+                        meadowGreen: {
+                            100: '#dcfce7',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                        }
+                    },
+                    animation: {
+                        'float': 'float 5s ease-in-out infinite',
+                        'float-slow': 'float 8s ease-in-out infinite',
+                        'bounce-slow': 'bounce 3s infinite',
+                        'twinkle': 'twinkle 3s ease-in-out infinite',
+                        'pulse-glow': 'pulseGlow 4s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-15px)' },
+                        },
+                        twinkle: {
+                            '0%, 100%': { opacity: '0.2', transform: 'scale(0.8)' },
+                            '50%': { opacity: '1', transform: 'scale(1.2)' },
+                        },
+                        pulseGlow: {
+                            '0%, 100%': { boxShadow: '0 0 25px rgba(255, 154, 195, 0.6), 0 0 50px rgba(250, 204, 21, 0.3)' },
+                            '50%': { boxShadow: '0 0 40px rgba(255, 92, 158, 0.85), 0 0 70px rgba(250, 204, 21, 0.5)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Fairytale Sky-to-Meadow Kids Birthday Gradient */
+        body {
+            background: linear-gradient(180deg, #bae6fd 0%, #e0f2fe 22%, #fff0f6 52%, #ffe3ee 82%, #dcfce7 100%);
+            overflow-x: hidden;
+        }
+
+        .royal-text-shadow {
+            text-shadow: 2px 2px 0px #ffffff, -1px -1px 0px #ffffff, 1px -1px 0px #ffffff, -1px 1px 0px #ffffff, 0 4px 12px rgba(214, 20, 96, 0.25);
+        }
+
+        .gold-text-outline {
+            color: #facc15;
+            text-shadow: 
+                -2px -2px 0 #78350f,  
+                 2px -2px 0 #78350f,
+                -2px  2px 0 #78350f,
+                 2px  2px 0 #78350f,
+                 0px  4px 10px rgba(0,0,0,0.2);
+        }
+
+        .number-one-outline {
+            color: #ff2a85;
+            text-shadow: 
+                -3px -3px 0 #1e1b4b,  
+                 3px -3px 0 #1e1b4b,
+                -3px  3px 0 #1e1b4b,
+                 3px  3px 0 #1e1b4b,
+                 0px  6px 15px rgba(245, 46, 126, 0.4);
+        }
+
+        .storybook-card {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            border: 4px solid #ffffff;
+            box-shadow: 0 12px 0 rgba(255, 154, 195, 0.35), 0 20px 35px -5px rgba(245, 46, 126, 0.18);
+        }
+
+        .tarpaulin-frame {
+            background: linear-gradient(135deg, #fde047 0%, #ff9ac3 50%, #7dd3fc 100%);
+            box-shadow: 0 16px 0 rgba(214, 20, 96, 0.25), 0 25px 50px -12px rgba(245, 46, 126, 0.45);
+        }
+
+        /* Sparkle & Confetti Particle Container */
+        #sparkles-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 40;
+            overflow: hidden;
+        }
+
+        .sparkle-item {
+            position: absolute;
+            pointer-events: none;
+            animation: floatUp linear infinite;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(105vh) rotate(0deg) scale(0.6);
+                opacity: 0;
+            }
+            15% {
+                opacity: 0.9;
+            }
+            85% {
+                opacity: 0.9;
+            }
+            100% {
+                transform: translateY(-10vh) rotate(360deg) scale(1.1);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-700 antialiased selection:bg-princessPink-200 selection:text-princessPink-600">
+
+    <!-- Floating Fairytale Sparkles & Pixie Dust Overlay -->
+    <div id="sparkles-container" aria-hidden="true"></div>
+
+    <!-- Top Floating Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-white/85 backdrop-blur-md border-b-2 border-princessPink-200 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="#home" class="flex items-center space-x-2.5 group">
+                    <span class="w-10 h-10 rounded-full bg-gradient-to-tr from-princessPink-500 to-royalGold-300 flex items-center justify-center text-white shadow-md group-hover:rotate-12 transition-transform border-2 border-white">
+                        <i class="fa-solid fa-crown text-sm"></i>
+                    </span>
+                    <div class="flex flex-col">
+                        <span class="font-display text-lg sm:text-xl text-princessPink-600 leading-none">Cristel Joy</span>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-skyMagic-500">1st Birthday & Christening</span>
+                    </div>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-5 text-sm font-semibold text-slate-600">
+                    <a href="#tarpaulin-showcase" class="hover:text-princessPink-500 transition-colors">Official Banner</a>
+                    <a href="#milestones" class="hover:text-princessPink-500 transition-colors">1st Year</a>
+                    <a href="#party-fun" class="hover:text-princessPink-500 transition-colors">Party Fun</a>
+                    <a href="#events" class="hover:text-princessPink-500 transition-colors">When & Where</a>
+                    <a href="#godparents" class="hover:text-princessPink-500 transition-colors">Ninong & Ninang</a>
+                    <a href="#rsvp" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-princessPink-500 to-princessPink-400 text-white shadow-md hover:shadow-lg hover:from-princessPink-600 hover:to-princessPink-500 transition-all transform hover:-translate-y-0.5 border-2 border-white">
+                        RSVP & Wishes
+                    </a>
+                </div>
+
+                <!-- Mobile RSVP Quick Button -->
+                <div class="md:hidden">
+                    <a href="#rsvp" class="px-4 py-2 rounded-full bg-gradient-to-r from-princessPink-500 to-princessPink-400 text-white text-xs font-bold shadow-md border border-white">
+                        RSVP Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION: Playful Fairytale Storybook & Tarpaulin Showcase -->
+    <header id="home" class="relative pt-6 pb-16 sm:pt-10 sm:pb-24 overflow-hidden">
+        <!-- Fluffy Clouds Top SVG -->
+        <div class="absolute top-0 left-0 w-full pointer-events-none opacity-90 text-white" aria-hidden="true">
+            <svg class="w-full h-16 sm:h-24" viewBox="0 0 1440 160" preserveAspectRatio="none" fill="currentColor">
+                <path d="M0,64 C120,140 240,10 360,70 C480,130 600,20 720,75 C840,130 960,15 1080,75 C1200,135 1320,30 1440,80 L1440,0 L0,0 Z"></path>
+            </svg>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center">
+            <!-- Playful Bunting / Crown Header -->
+            <div class="inline-flex items-center space-x-2 px-5 py-2 rounded-full bg-white/95 text-princessPink-600 font-bold text-xs sm:text-sm shadow-md border-2 border-princessPink-200 mb-4 animate-float-slow">
+                <span>👑</span>
+                <span class="uppercase tracking-wider">Once Upon A Time... A Little Princess Turned One!</span>
+                <span>✨</span>
+            </div>
+
+            <h1 class="font-script text-5xl sm:text-6xl md:text-7xl text-slate-800 leading-tight royal-text-shadow">
+                Happy Christening & 1st Birthday
+            </h1>
+
+            <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mt-2 mb-8">
+                <span class="font-display text-4xl sm:text-6xl gold-text-outline tracking-wide">Cristel Joy</span>
+                <span class="inline-flex items-center px-4 py-1.5 rounded-full bg-princessPink-500 text-white font-bold text-sm sm:text-base shadow-lg border-2 border-white transform -rotate-2">
+                    Turning <span class="font-display text-2xl ml-1.5 text-royalGold-300">1</span>
+                </span>
+                <span class="inline-flex items-center px-4 py-1.5 rounded-full bg-skyMagic-500 text-white font-bold text-sm sm:text-base shadow-lg border-2 border-white transform rotate-2">
+                    <i class="fa-regular fa-calendar-heart mr-1.5"></i> Friday • Dec 25, 2026
+                </span>
+            </div>
+
+            <!-- MAIN TARPAULIN SHOWCASE CARD -->
+            <div id="tarpaulin-showcase" class="max-w-4xl mx-auto relative">
+                <!-- Cute Corner Floating Badges -->
+                <div class="hidden sm:flex absolute -top-5 -left-5 z-20 w-16 h-16 rounded-full bg-royalGold-300 border-4 border-white shadow-lg items-center justify-center text-2xl animate-bounce-slow" title="Royal Crown">
+                    👑
+                </div>
+                <div class="hidden sm:flex absolute -bottom-5 -right-5 z-20 w-16 h-16 rounded-full bg-princessPink-400 border-4 border-white shadow-lg items-center justify-center text-2xl animate-float" title="1st Birthday Cake">
+                    🎂
+                </div>
+
+                <!-- Framed Tarpaulin Container -->
+                <div class="tarpaulin-frame p-2.5 sm:p-4 rounded-[2rem] sm:rounded-[2.5rem] relative group">
+                    <div class="relative rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden bg-skyMagic-100 border-4 border-white">
+                        <img 
+                            id="tarpaulin-main-img"
+                            src="138997.jpg" 
+                            alt="Princess Cristel Joy Happy Christening and 1st Birthday Official Tarpaulin Banner" 
+                            class="w-full h-auto object-contain mx-auto block transition-transform duration-500 group-hover:scale-[1.01] cursor-pointer"
+                            title="Click to view full screen"
+                        >
+                        
+                        <!-- Interactive Action Overlay Bar on Bottom of Tarpaulin -->
+                        <div class="bg-white/95 backdrop-blur-md px-4 py-3 sm:px-6 sm:py-3.5 border-t-2 border-princessPink-200 flex flex-wrap items-center justify-between gap-3">
+                            <div class="flex items-center space-x-2 text-left">
+                                <span class="w-8 h-8 rounded-full bg-princessPink-100 text-princessPink-600 flex items-center justify-center text-sm">
+                                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                                </span>
+                                <div>
+                                    <p class="text-xs sm:text-sm font-bold text-slate-800">Official Party Tarpaulin</p>
+                                    <p class="text-[11px] text-slate-500">Cristel Joy's Christening & 1st Birthday</p>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-wrap items-center gap-2">
+                                <button 
+                                    type="button" 
+                                    id="open-lightbox-btn"
+                                    class="px-4 py-2 rounded-full bg-skyMagic-100 hover:bg-skyMagic-200 text-skyMagic-600 font-bold text-xs sm:text-sm transition-colors flex items-center space-x-1.5"
+                                >
+                                    <i class="fa-solid fa-expand"></i>
+                                    <span>Full View</span>
+                                </button>
+                                <a 
+                                    id="download-tarpaulin-link"
+                                    href="138997.jpg" 
+                                    download="Cristel-Joy-1st-Birthday-Banner.jpg"
+                                    class="px-4 py-2 rounded-full bg-princessPink-500 hover:bg-princessPink-600 text-white font-bold text-xs sm:text-sm shadow transition-colors flex items-center space-x-1.5"
+                                >
+                                    <i class="fa-solid fa-download"></i>
+                                    <span>Save Banner</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Primary Kids Party Action Buttons -->
+            <div class="mt-10 flex flex-wrap justify-center gap-3 sm:gap-4">
+                <a href="#rsvp" class="px-7 py-3.5 rounded-full bg-gradient-to-r from-princessPink-500 via-princessPink-400 to-princessPink-500 text-white font-bold text-sm sm:text-base shadow-xl shadow-princessPink-300/60 hover:shadow-2xl transform hover:-translate-y-1 transition-all flex items-center space-x-2 border-2 border-white">
+                    <i class="fa-solid fa-envelope-open-text"></i>
+                    <span>RSVP & Send Wish</span>
+                </a>
+                <button type="button" id="celebrate-confetti-btn" class="px-7 py-3.5 rounded-full bg-gradient-to-r from-royalGold-400 to-royalGold-300 text-slate-900 font-bold text-sm sm:text-base shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all flex items-center space-x-2 border-2 border-white">
+                    <span>🎂</span>
+                    <span>Blow 1st Candle & Confetti!</span>
+                </button>
+                <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Cristel+Joy's+Christening+%26+1st+Birthday&dates=20261225T020000Z/20261225T080000Z&details=Join+us+to+celebrate+Princess+Cristel+Joy's+Holy+Christening+and+1st+Birthday!" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-full bg-white text-skyMagic-600 font-bold text-sm sm:text-base border-2 border-skyMagic-200 shadow-md hover:bg-skyMagic-50 transform hover:-translate-y-1 transition-all flex items-center space-x-2">
+                    <i class="fa-regular fa-calendar-plus"></i>
+                    <span>Save Date</span>
+                </a>
+                <button type="button" id="copy-invite-btn" class="px-6 py-3.5 rounded-full bg-white text-princessPink-600 font-bold text-sm sm:text-base border-2 border-princessPink-200 shadow-md hover:bg-princessPink-50 transform hover:-translate-y-1 transition-all flex items-center space-x-2">
+                    <i class="fa-solid fa-share-nodes"></i>
+                    <span id="copy-invite-label">Copy Invite</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- LIVE COUNTDOWN SECTION -->
+    <section id="countdown" class="py-10 px-4 sm:px-6 relative z-10">
+        <div class="max-w-4xl mx-auto storybook-card rounded-[2.5rem] p-6 sm:p-10 text-center">
+            <div class="inline-flex items-center space-x-2 px-4 py-1 rounded-full bg-royalGold-100 text-royalGold-600 font-bold text-xs uppercase tracking-widest mb-2">
+                <span>⏳</span>
+                <span>Counting Down The Sleeps</span>
+                <span>⏳</span>
+            </div>
+            <h2 class="font-script text-4xl sm:text-5xl text-princessPink-600 mb-6">
+                Until Cristel Joy Blows Her 1st Candle!
+            </h2>
+
+            <!-- Countdown Grid -->
+            <div id="countdown-grid" class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 max-w-2xl mx-auto">
+                <div class="bg-gradient-to-b from-skyMagic-100 to-white rounded-3xl p-4 sm:p-5 border-2 border-skyMagic-200 shadow-sm">
+                    <span id="days" class="block font-display text-3xl sm:text-5xl text-skyMagic-500">00</span>
+                    <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-500 mt-1 block">Days</span>
+                </div>
+                <div class="bg-gradient-to-b from-princessPink-100 to-white rounded-3xl p-4 sm:p-5 border-2 border-princessPink-200 shadow-sm">
+                    <span id="hours" class="block font-display text-3xl sm:text-5xl text-princessPink-500">00</span>
+                    <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-500 mt-1 block">Hours</span>
+                </div>
+                <div class="bg-gradient-to-b from-royalGold-100 to-white rounded-3xl p-4 sm:p-5 border-2 border-royalGold-200 shadow-sm">
+                    <span id="minutes" class="block font-display text-3xl sm:text-5xl text-royalGold-600">00</span>
+                    <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-500 mt-1 block">Minutes</span>
+                </div>
+                <div class="bg-gradient-to-b from-princessPink-100 to-white rounded-3xl p-4 sm:p-5 border-2 border-princessPink-200 shadow-sm">
+                    <span id="seconds" class="block font-display text-3xl sm:text-5xl text-princessPink-500">00</span>
+                    <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-500 mt-1 block">Seconds</span>
+                </div>
+            </div>
+
+            <p id="countdown-message" class="mt-6 text-sm sm:text-base text-slate-600 font-semibold">
+                🎄 Friday, December 25, 2026 • A magical Christmas Day Christening & 1st Birthday! 🎄
+            </p>
+        </div>
+    </section>
+
+    <!-- CRISTEL JOY'S 1ST YEAR MILESTONES GALLERY -->
+    <section id="milestones" class="py-12 px-4 sm:px-6 relative z-10">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-10">
+                <span class="px-4 py-1.5 rounded-full bg-white text-royalGold-600 text-xs font-bold uppercase tracking-widest shadow-sm border-2 border-royalGold-200">
+                    📸 Growing Up So Fast
+                </span>
+                <h2 class="font-script text-4xl sm:text-6xl text-princessPink-600 mt-3">
+                    Cristel Joy's First Year
+                </h2>
+                <p class="text-slate-600 max-w-xl mx-auto mt-2 text-sm sm:text-base">
+                    Twelve months of sweet giggles, tiny footsteps, and magical memories! (Click text to customize)
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="storybook-card rounded-3xl p-5 text-center hover:-translate-y-1.5 transition-transform">
+                    <div class="w-full h-36 rounded-2xl bg-gradient-to-br from-princessPink-100 to-skyMagic-100 flex flex-col items-center justify-center mb-4 border-2 border-white shadow-inner">
+                        <span class="text-4xl mb-1">🎀</span>
+                        <span class="text-xs font-bold text-princessPink-600 bg-white/80 px-3 py-0.5 rounded-full">Month 1 – 3</span>
+                    </div>
+                    <h3 contenteditable="true" class="font-bold text-base text-slate-800">Our Sweet Baby Girl</h3>
+                    <p contenteditable="true" class="text-xs text-slate-600 mt-1.5">
+                        Tiny yawns, bright curious eyes, and melting everyone's hearts with her first sweet giggle!
+                    </p>
+                </div>
+
+                <div class="storybook-card rounded-3xl p-5 text-center hover:-translate-y-1.5 transition-transform">
+                    <div class="w-full h-36 rounded-2xl bg-gradient-to-br from-skyMagic-100 to-royalGold-100 flex flex-col items-center justify-center mb-4 border-2 border-white shadow-inner">
+                        <span class="text-4xl mb-1">🧸</span>
+                        <span class="text-xs font-bold text-skyMagic-600 bg-white/80 px-3 py-0.5 rounded-full">Month 4 – 6</span>
+                    </div>
+                    <h3 contenteditable="true" class="font-bold text-base text-slate-800">Sitting Pretty & First Bites</h3>
+                    <p contenteditable="true" class="text-xs text-slate-600 mt-1.5">
+                        Sitting up like a little princess in her cute ribbons and tasting her very first yummy baby food!
+                    </p>
+                </div>
+
+                <div class="storybook-card rounded-3xl p-5 text-center hover:-translate-y-1.5 transition-transform">
+                    <div class="w-full h-36 rounded-2xl bg-gradient-to-br from-royalGold-100 to-princessPink-100 flex flex-col items-center justify-center mb-4 border-2 border-white shadow-inner">
+                        <span class="text-4xl mb-1">👣</span>
+                        <span class="text-xs font-bold text-royalGold-600 bg-white/80 px-3 py-0.5 rounded-full">Month 7 – 9</span>
+                    </div>
+                    <h3 contenteditable="true" class="font-bold text-base text-slate-800">Crawling & Clapping</h3>
+                    <p contenteditable="true" class="text-xs text-slate-600 mt-1.5">
+                        Zooming around the house, waving bye-bye, and dancing to her favorite princess songs!
+                    </p>
+                </div>
+
+                <div class="storybook-card rounded-3xl p-5 text-center hover:-translate-y-1.5 transition-transform">
+                    <div class="w-full h-36 rounded-2xl bg-gradient-to-br from-princessPink-200 to-royalGold-100 flex flex-col items-center justify-center mb-4 border-2 border-white shadow-inner">
+                        <span class="text-4xl mb-1">👸</span>
+                        <span class="text-xs font-bold text-princessPink-600 bg-white/80 px-3 py-0.5 rounded-full">Month 10 – 12</span>
+                    </div>
+                    <h3 contenteditable="true" class="font-bold text-base text-slate-800">Birthday Girl Turns ONE!</h3>
+                    <p contenteditable="true" class="text-xs text-slate-600 mt-1.5">
+                        Taking tiny steps, saying Mama & Papa, and ready to wear her pink gown for her 1st birthday!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KIDS PARTY FUN & HIGHLIGHTS SECTION (Playful & Child-Centered) -->
+    <section id="party-fun" class="py-14 px-4 sm:px-6 relative z-10">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-10">
+                <span class="px-4 py-1.5 rounded-full bg-white text-princessPink-500 text-xs font-bold uppercase tracking-widest shadow-sm border-2 border-princessPink-200">
+                    🎀 Fairytale Surprises 🎀
+                </span>
+                <h2 class="font-script text-4xl sm:text-6xl text-princessPink-600 mt-3">
+                    Fun For Kids & Kids-At-Heart
+                </h2>
+                <p class="text-slate-600 max-w-xl mx-auto mt-2 text-sm sm:text-base">
+                    Bring your biggest smiles! We prepared magical treats and playful activities for all our little guests.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Fun Card 1 -->
+                <div class="storybook-card rounded-3xl p-6 text-center hover:-translate-y-1.5 transition-transform">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-princessPink-100 text-3xl flex items-center justify-center mb-4 shadow-inner">
+                        🏰
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-800">Princess Photo Booth</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 mt-2">
+                        Snap cute pictures with our Aurora & Fairytale Castle backdrop and instant souvenir prints!
+                    </p>
+                </div>
+
+                <!-- Fun Card 2 -->
+                <div class="storybook-card rounded-3xl p-6 text-center hover:-translate-y-1.5 transition-transform">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-skyMagic-100 text-3xl flex items-center justify-center mb-4 shadow-inner">
+                        🍭
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-800">Sweet Candy Corner</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 mt-2">
+                        Cupcakes, cotton candy, ice cream, and magical fairy treats for all the kiddos!
+                    </p>
+                </div>
+
+                <!-- Fun Card 3 -->
+                <div class="storybook-card rounded-3xl p-6 text-center hover:-translate-y-1.5 transition-transform">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-royalGold-100 text-3xl flex items-center justify-center mb-4 shadow-inner">
+                        🎪
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-800">Games & Bubble Show</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 mt-2">
+                        Exciting parlor games, prizes, and a bubbly fairy-godmother magic show!
+                    </p>
+                </div>
+
+                <!-- Fun Card 4 -->
+                <div class="storybook-card rounded-3xl p-6 text-center hover:-translate-y-1.5 transition-transform">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-meadowGreen-100 text-3xl flex items-center justify-center mb-4 shadow-inner">
+                        🎁
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-800">Loot Bags & Pabitin</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 mt-2">
+                        Every little prince and princess goes home with a special royal goodie bag!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EVENT DETAILS & SCHEDULE SECTION -->
+    <section id="events" class="py-12 px-4 sm:px-6 relative z-10">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="px-4 py-1.5 rounded-full bg-white text-skyMagic-500 text-xs font-bold uppercase tracking-widest shadow-sm border-2 border-skyMagic-200">
+                    📅 Royal Schedule
+                </span>
+                <h2 class="font-script text-4xl sm:text-6xl text-princessPink-600 mt-3">
+                    When & Where
+                </h2>
+                <p class="text-slate-600 max-w-xl mx-auto mt-2 text-sm sm:text-base">
+                    Join us as we celebrate two precious milestones in the life of our beloved daughter, Cristel Joy.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Card 1: Holy Christening Ceremony -->
+                <div class="storybook-card rounded-3xl p-8 relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-skyMagic-100 rounded-bl-full -mr-8 -mt-8 opacity-60"></div>
+                    
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-skyMagic-300 to-skyMagic-500 text-white flex items-center justify-center text-2xl shadow-lg mb-6 border-2 border-white">
+                        <i class="fa-solid fa-church"></i>
+                    </div>
+
+                    <span class="text-xs font-bold uppercase tracking-widest text-skyMagic-500">Part I • Sacred Blessing</span>
+                    <h3 class="font-script text-4xl text-slate-800 mt-1 mb-4">Holy Christening</h3>
+                    
+                    <ul class="space-y-3 text-slate-600 text-sm sm:text-base">
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-regular fa-calendar text-princessPink-500 mt-1"></i>
+                            <span><strong>Date:</strong> Friday, December 25, 2026</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-regular fa-clock text-princessPink-500 mt-1"></i>
+                            <span contenteditable="true" class="border-b border-dashed border-princessPink-300 focus:outline-none focus:bg-princessPink-50 px-1 rounded" title="Click to customize time">
+                                <strong>Time:</strong> 10:00 AM (Please arrive 15 mins early)
+                            </span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-solid fa-location-dot text-princessPink-500 mt-1"></i>
+                            <span contenteditable="true" class="border-b border-dashed border-princessPink-300 focus:outline-none focus:bg-princessPink-50 px-1 rounded" title="Click to customize church venue">
+                                <strong>Venue:</strong> St. John Nepomucene Parish Church (Click to Edit)
+                            </span>
+                        </li>
+                    </ul>
+
+                    <div class="mt-6 pt-4 border-t border-princessPink-100 flex items-center justify-between text-xs text-slate-400">
+                        <span><i class="fa-solid fa-pen-to-square mr-1"></i> Click text to edit venue/time</span>
+                        <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="text-skyMagic-500 font-bold hover:underline">
+                            Open Map <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2: 1st Birthday Royal Reception -->
+                <div class="storybook-card rounded-3xl p-8 relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-princessPink-100 rounded-bl-full -mr-8 -mt-8 opacity-60"></div>
+                    
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-princessPink-400 to-princessPink-600 text-white flex items-center justify-center text-2xl shadow-lg mb-6 border-2 border-white">
+                        <i class="fa-solid fa-cake-candles"></i>
+                    </div>
+
+                    <span class="text-xs font-bold uppercase tracking-widest text-princessPink-500">Part II • Birthday Party</span>
+                    <h3 class="font-script text-4xl text-slate-800 mt-1 mb-4">1st Birthday Reception</h3>
+                    
+                    <ul class="space-y-3 text-slate-600 text-sm sm:text-base">
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-regular fa-calendar text-skyMagic-500 mt-1"></i>
+                            <span><strong>Date:</strong> Friday, December 25, 2026</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-regular fa-clock text-skyMagic-500 mt-1"></i>
+                            <span contenteditable="true" class="border-b border-dashed border-skyMagic-300 focus:outline-none focus:bg-skyMagic-50 px-1 rounded" title="Click to customize time">
+                                <strong>Time:</strong> 12:00 PM – 4:00 PM (Lunch, Games & Cake)
+                            </span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-solid fa-location-dot text-skyMagic-500 mt-1"></i>
+                            <span contenteditable="true" class="border-b border-dashed border-skyMagic-300 focus:outline-none focus:bg-skyMagic-50 px-1 rounded" title="Click to customize reception venue">
+                                <strong>Venue:</strong> Royal Garden Pavilion & Events Hall (Click to Edit)
+                            </span>
+                        </li>
+                    </ul>
+
+                    <div class="mt-6 pt-4 border-t border-princessPink-100 flex items-center justify-between text-xs text-slate-400">
+                        <span><i class="fa-solid fa-pen-to-square mr-1"></i> Click text to edit venue/time</span>
+                        <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="text-princessPink-500 font-bold hover:underline">
+                            Open Map <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BELOVED GODPARENTS (NINONG & NINANG) SECTION -->
+    <section id="godparents" class="py-12 px-4 sm:px-6 relative z-10">
+        <div class="max-w-4xl mx-auto storybook-card rounded-[2.5rem] p-8 sm:p-10 text-center">
+            <span class="px-4 py-1 rounded-full bg-princessPink-100 text-princessPink-600 text-xs font-bold uppercase tracking-widest">
+                ✨ Special Guardians ✨
+            </span>
+            <h2 class="font-script text-4xl sm:text-5xl text-princessPink-600 mt-2">
+                Beloved Ninongs & Ninangs
+            </h2>
+            <p class="text-slate-600 mt-1 text-xs sm:text-sm">
+                Click any name below to customize Cristel Joy's Godparents list!
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8 text-left">
+                <!-- Ninongs -->
+                <div class="bg-skyMagic-50/80 rounded-3xl p-6 border-2 border-skyMagic-200">
+                    <h3 class="font-bold text-skyMagic-600 text-center text-lg mb-3 flex items-center justify-center space-x-2">
+                        <span>🤴</span>
+                        <span>Ninongs (Godfathers)</span>
+                    </h3>
+                    <ul contenteditable="true" class="space-y-2 text-sm sm:text-base text-slate-700 font-medium text-center focus:outline-none focus:bg-white/80 rounded-xl p-2">
+                        <li>Ninong Juan Dela Cruz</li>
+                        <li>Ninong Mark Anthony Reyes</li>
+                        <li>Ninong Christian Santos</li>
+                        <li>Ninong Gabriel Mendoza</li>
+                    </ul>
+                </div>
+
+                <!-- Ninangs -->
+                <div class="bg-princessPink-50/80 rounded-3xl p-6 border-2 border-princessPink-200">
+                    <h3 class="font-bold text-princessPink-600 text-center text-lg mb-3 flex items-center justify-center space-x-2">
+                        <span>👸</span>
+                        <span>Ninangs (Godmothers)</span>
+                    </h3>
+                    <ul contenteditable="true" class="space-y-2 text-sm sm:text-base text-slate-700 font-medium text-center focus:outline-none focus:bg-white/80 rounded-xl p-2">
+                        <li>Ninang Maria Clara Bautista</li>
+                        <li>Ninang Angelica Villanueva</li>
+                        <li>Ninang Sophia Garcia</li>
+                        <li>Ninang Camille Ramos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROYAL DRESS CODE SECTION -->
+    <section id="attire" class="py-10 px-4 sm:px-6 relative z-10">
+        <div class="max-w-4xl mx-auto storybook-card rounded-[2.5rem] p-8 sm:p-10 text-center">
+            <div class="w-14 h-14 mx-auto rounded-full bg-royalGold-100 text-royalGold-600 flex items-center justify-center text-2xl mb-4 shadow-inner">
+                👗
+            </div>
+            <h2 class="font-script text-4xl sm:text-5xl text-princessPink-600">Cute Party Outfit Colors</h2>
+            <p class="text-slate-600 mt-2 max-w-lg mx-auto text-sm sm:text-base">
+                Dress up in our fairytale pastel colors so everyone looks picture-perfect beside Princess Cristel Joy!
+            </p>
+
+            <!-- Color Swatches -->
+            <div class="flex flex-wrap justify-center gap-6 sm:gap-10 mt-8">
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-princessPink-300 border-4 border-white shadow-lg transform hover:scale-110 transition-transform"></div>
+                    <span class="mt-2 font-bold text-sm text-slate-700">Pastel Pink</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-tr from-royalGold-400 to-royalGold-200 border-4 border-white shadow-lg transform hover:scale-110 transition-transform"></div>
+                    <span class="mt-2 font-bold text-sm text-slate-700">Royal Gold</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white border-4 border-princessPink-100 shadow-lg transform hover:scale-110 transition-transform"></div>
+                    <span class="mt-2 font-bold text-sm text-slate-700">Pure White</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-skyMagic-200 border-4 border-white shadow-lg transform hover:scale-110 transition-transform"></div>
+                    <span class="mt-2 font-bold text-sm text-slate-700">Sky Blue</span>
+                </div>
+            </div>
+
+            <!-- Cute Gift & Blessing Guide Note -->
+            <div class="mt-10 pt-8 border-t-2 border-dashed border-princessPink-200 max-w-2xl mx-auto">
+                <div class="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-princessPink-50 text-princessPink-600 text-xs font-bold mb-2">
+                    <span>🎀</span>
+                    <span>A Little Note On Gifts For Our Baby Girl</span>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    Your presence, prayers, and warm hugs on Cristel Joy's Christening & 1st Birthday are the greatest gifts we could ever ask for! Should you wish to bless our little girl with a token of love, baby girl dresses & hair bows (12–18 mos), educational toys, or a blessing for her future savings are warmly appreciated.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FULL-SCREEN TARPAULIN LIGHTBOX MODAL -->
+    <div id="tarpaulin-lightbox" class="fixed inset-0 z-50 hidden bg-slate-900/90 backdrop-blur-md flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Full Screen Tarpaulin Banner">
+        <div class="relative max-w-5xl w-full flex flex-col items-center">
+            <button 
+                type="button" 
+                id="close-lightbox-btn"
+                class="self-end mb-3 px-4 py-2 rounded-full bg-white text-princessPink-600 font-bold text-sm shadow-lg hover:bg-princessPink-50 flex items-center space-x-1.5"
+            >
+                <i class="fa-solid fa-xmark"></i>
+                <span>Close Preview</span>
+            </button>
+            <img 
+                id="tarpaulin-lightbox-img"
+                src="138997.jpg" 
+                alt="Full Screen Princess Cristel Joy Tarpaulin" 
+                class="max-h-[82vh] w-auto rounded-2xl border-4 border-white shadow-2xl object-contain"
+            >
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-white/90 backdrop-blur-md border-t-2 border-princessPink-200 py-10 px-4 text-center relative z-10">
+        <div class="max-w-3xl mx-auto">
+            <div class="w-12 h-12 mx-auto rounded-full bg-gradient-to-tr from-princessPink-400 to-royalGold-300 text-white flex items-center justify-center shadow-md mb-3 border-2 border-white">
+                <i class="fa-solid fa-crown"></i>
+            </div>
+            <p class="font-script text-3xl sm:text-4xl text-princessPink-600">
+                Cristel Joy's Christening & 1st Birthday
+            </p>
+            <p class="text-sm text-slate-500 mt-1 font-medium">
+                Friday, December 25, 2026 • Thank you for celebrating our little princess!
+            </p>
+            <div class="mt-4 flex justify-center space-x-4 text-xs font-bold text-princessPink-500">
+                <a href="#home" class="hover:underline">Top</a>
+                <span>•</span>
+                <a href="#tarpaulin-showcase" class="hover:underline">Tarpaulin</a>
+                <span>•</span>
+                <a href="#milestones" class="hover:underline">1st Year</a>
+                <span>•</span>
+                <a href="#events" class="hover:underline">Schedule</a>
+                <span>•</span>
+                <a href="#rsvp" class="hover:underline">RSVP</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING FAIRYTALE MUSIC BOX BUTTON -->
+    <button 
+        type="button" 
+        id="music-toggle-btn" 
+        aria-label="Toggle Fairytale Birthday Music"
+        class="fixed bottom-5 right-5 z-50 px-4 py-3 rounded-full bg-gradient-to-r from-princessPink-500 to-royalGold-400 text-white font-bold text-xs sm:text-sm shadow-xl border-2 border-white flex items-center space-x-2 hover:scale-105 transition-transform"
+    >
+        <i id="music-icon" class="fa-solid fa-music"></i>
+        <span id="music-label">Play Music Box</span>
+    </button>
+
+    <!-- INTERACTIVE JAVASCRIPT -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 0. Full-Screen Tarpaulin Lightbox Controls
+            const lightbox = document.getElementById('tarpaulin-lightbox');
+            const openLightboxBtn = document.getElementById('open-lightbox-btn');
+            const closeLightboxBtn = document.getElementById('close-lightbox-btn');
+            const mainTarpaulinImg = document.getElementById('tarpaulin-main-img');
+
+            if (openLightboxBtn && lightbox && closeLightboxBtn) {
+                openLightboxBtn.addEventListener('click', () => {
+                    lightbox.classList.remove('hidden');
+                });
+                if (mainTarpaulinImg) {
+                    mainTarpaulinImg.addEventListener('click', () => {
+                        lightbox.classList.remove('hidden');
+                    });
+                }
+                closeLightboxBtn.addEventListener('click', () => {
+                    lightbox.classList.add('hidden');
+                });
+                lightbox.addEventListener('click', (e) => {
+                    if (e.target === lightbox) {
+                        lightbox.classList.add('hidden');
+                    }
+                });
+            }
+
+            // 1. Floating Fairytale Sparkles & Party Balloons/Stars Generator
+            const sparklesContainer = document.getElementById('sparkles-container');
+            const symbols = ['✨', '👑', '🌸', '🎈', '⭐'];
+            const colors = ['#facc15', '#ff9ac3', '#7dd3fc', '#ffffff'];
+
+            function createSparkle() {
+                if (!sparklesContainer) return;
+                const el = document.createElement('span');
+                el.classList.add('sparkle-item');
+                el.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+                
+                const leftPos = Math.random() * 100;
+                const duration = 9 + Math.random() * 10;
+                const size = 12 + Math.random() * 14;
+                const color = colors[Math.floor(Math.random() * colors.length)];
+
+                el.style.left = `${leftPos}vw`;
+                el.style.animationDuration = `${duration}s`;
+                el.style.fontSize = `${size}px`;
+                el.style.color = color;
+                el.style.textShadow = '0 0 8px rgba(255, 255, 255, 0.9)';
+
+                sparklesContainer.appendChild(el);
+
+                setTimeout(() => {
+                    el.remove();
+                }, duration * 1000);
+            }
+
+            for (let i = 0; i < 12; i++) {
+                setTimeout(createSparkle, i * 600);
+            }
+            setInterval(createSparkle, 1500);
+
+            // 1B. Interactive Confetti Burst, Copy Invitation Link & Fairytale Music Box
+            const celebrateBtn = document.getElementById('celebrate-confetti-btn');
+            const copyInviteBtn = document.getElementById('copy-invite-btn');
+            const copyInviteLabel = document.getElementById('copy-invite-label');
+            const musicToggleBtn = document.getElementById('music-toggle-btn');
+            const musicIcon = document.getElementById('music-icon');
+            const musicLabel = document.getElementById('music-label');
+
+            function launchConfettiBurst() {
+                const confettiIcons = ['🎉', '🎊', '🎂', '👑', '✨', '💖', '🎈'];
+                for (let i = 0; i < 28; i++) {
+                    setTimeout(() => {
+                        if (!sparklesContainer) return;
+                        const piece = document.createElement('span');
+                        piece.classList.add('sparkle-item');
+                        piece.textContent = confettiIcons[Math.floor(Math.random() * confettiIcons.length)];
+                        piece.style.left = `${Math.random() * 100}vw`;
+                        piece.style.animationDuration = `${3 + Math.random() * 3}s`;
+                        piece.style.fontSize = `${18 + Math.random() * 16}px`;
+                        sparklesContainer.appendChild(piece);
+                        setTimeout(() => piece.remove(), 6000);
+                    }, i * 50);
+                }
+            }
+
+            if (celebrateBtn) {
+                celebrateBtn.addEventListener('click', () => {
+                    launchConfettiBurst();
+                });
+            }
+
+            if (copyInviteBtn && copyInviteLabel) {
+                copyInviteBtn.addEventListener('click', () => {
+                    const inviteText = "👑 You're invited to Princess Cristel Joy's Holy Christening & 1st Birthday on Friday, December 25, 2026! ✨";
+                    const tempInput = document.createElement('textarea');
+                    tempInput.value = `${inviteText} ${window.location.href}`;
+                    document.body.appendChild(tempInput);
+                    tempInput.select();
+                    try {
+                        document.execCommand('copy');
+                        copyInviteLabel.textContent = 'Copied! ✨';
+                        setTimeout(() => {
+                            copyInviteLabel.textContent = 'Copy Invite';
+                        }, 2500);
+                    } catch (err) {
+                        copyInviteLabel.textContent = 'Ready to Share!';
+                    }
+                    document.body.removeChild(tempInput);
+                });
+            }
+
+            // Gentle Fairytale Music Box Melody using Tone.js
+            let isPlayingMusic = false;
+            let musicLoop = null;
+            let musicSynth = null;
+
+            if (musicToggleBtn) {
+                musicToggleBtn.addEventListener('click', async () => {
+                    try {
+                        if (typeof Tone === 'undefined') return;
+                        if (!isPlayingMusic) {
+                            await Tone.start();
+                            if (!musicSynth) {
+                                musicSynth = new Tone.PolySynth(Tone.Synth, {
+                                    oscillator: { type: 'sine' },
+                                    envelope: { attack: 0.05, decay: 0.3, sustain: 0.2, release: 1.2 }
+                                }).toDestination();
+                                musicSynth.volume.value = -10;
+                            }
+                            const melody = [
+                                'C5', 'C5', 'D5', 'C5', 'F5', 'E5',
+                                'C5', 'C5', 'D5', 'C5', 'G5', 'F5',
+                                'C5', 'C5', 'C6', 'A5', 'F5', 'E5', 'D5',
+                                'Bb5', 'Bb5', 'A5', 'F5', 'G5', 'F5'
+                            ];
+                            let step = 0;
+                            musicLoop = new Tone.Loop((time) => {
+                                const note = melody[step % melody.length];
+                                musicSynth.triggerAttackRelease(note, '8n', time);
+                                step++;
+                            }, '4n').start(0);
+                            Tone.Transport.start();
+                            isPlayingMusic = true;
+                            if (musicIcon) musicIcon.className = 'fa-solid fa-volume-high animate-pulse';
+                            if (musicLabel) musicLabel.textContent = 'Pause Music';
+                        } else {
+                            Tone.Transport.stop();
+                            if (musicLoop) {
+                                musicLoop.stop();
+                                musicLoop.dispose();
+                                musicLoop = null;
+                            }
+                            isPlayingMusic = false;
+                            if (musicIcon) musicIcon.className = 'fa-solid fa-music';
+                            if (musicLabel) musicLabel.textContent = 'Play Music Box';
+                        }
+                    } catch (err) {
+                        // Ignore audio autoplay restrictions if blocked
+                    }
+                });
+            }
+
+            // 2. Live Countdown Timer to Friday, December 25, 2026 (10:00 AM)
+            const targetDate = new Date('December 25, 2026 10:00:00').getTime();
+            const daysEl = document.getElementById('days');
+            const hoursEl = document.getElementById('hours');
+            const minutesEl = document.getElementById('minutes');
+            const secondsEl = document.getElementById('seconds');
+            const countdownMsg = document.getElementById('countdown-message');
+
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = targetDate - now;
+
+                if (distance <= 0) {
+                    if (daysEl) daysEl.textContent = '00';
+                    if (hoursEl) hoursEl.textContent = '00';
+                    if (minutesEl) minutesEl.textContent = '00';
+                    if (secondsEl) secondsEl.textContent = '00';
+                    if (countdownMsg) {
+                        countdownMsg.textContent = "🎉 Today is the magical day! Happy Christening & 1st Birthday, Cristel Joy! 🎉";
+                    }
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                if (daysEl) daysEl.textContent = String(days).padStart(2, '0');
+                if (hoursEl) hoursEl.textContent = String(hours).padStart(2, '0');
+                if (minutesEl) minutesEl.textContent = String(minutes).padStart(2, '0');
+                if (secondsEl) secondsEl.textContent = String(seconds).padStart(2, '0');
+            }
+
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+
+            // 3. Interactive RSVP Form & Local Wishes Wall
+            const rsvpForm = document.getElementById('rsvp-form');
+            const wishesWall = document.getElementById('wishes-wall');
+            const wishesBadge = document.getElementById('wishes-count-badge');
+            const rsvpToast = document.getElementById('rsvp-toast');
+            const guestCountWrapper = document.getElementById('guest-count-wrapper');
+            const countInput = document.getElementById('guest-count');
+            const attendanceRadios = document.querySelectorAll('input[name="attendance"]');
+            const STORAGE_KEY = 'cristel_joy_birthday_wishes_v1';
+
+            // Toggle guest count selector if guest declines
+            attendanceRadios.forEach((radio) => {
+                radio.addEventListener('change', (e) => {
+                    if (e.target.value === 'Regretfully Declines') {
+                        guestCountWrapper.style.opacity = '0.5';
+                        countInput.disabled = true;
+                    } else {
+                        guestCountWrapper.style.opacity = '1';
+                        countInput.disabled = false;
+                    }
+                });
+            });
+
+            function escapeHTML(str) {
+                const div = document.createElement('div');
+                div.textContent = str;
+                return div.innerHTML;
+            }
+
+            function renderWishCard(wish, prepend = true) {
+                if (!wishesWall) return;
+                const isComing = wish.attendance === 'Joyfully Accepts';
+                const borderClass = isComing ? 'border-l-princessPink-400' : 'border-l-skyMagic-400';
+                const badgeClass = isComing
+                    ? 'text-princessPink-600 bg-princessPink-50'
+                    : 'text-skyMagic-600 bg-skyMagic-50';
+                const statusIcon = isComing ? '🥳' : '💌';
+                const seatInfo = isComing && wish.guests ? ` • ${escapeHTML(wish.guests)}` : '';
+
+                const card = document.createElement('div');
+                card.className = `storybook-card rounded-3xl p-5 border-l-8 ${borderClass} transition-all`;
+                card.innerHTML = `
+                    <div class="flex justify-between items-start gap-2">
+                        <div>
+                            <h4 class="font-bold text-slate-800 text-base">${escapeHTML(wish.name)}</h4>
+                            <span class="inline-flex items-center text-xs font-semibold ${badgeClass} px-2.5 py-0.5 rounded-full mt-1">
+                                ${statusIcon} ${escapeHTML(wish.attendance)}${seatInfo}
+                            </span>
+                        </div>
+                        <span class="text-xs text-slate-400">${escapeHTML(wish.date || 'Just now')}</span>
+                    </div>
+                    <p class="text-slate-600 text-sm mt-3 italic leading-relaxed">
+                        "${escapeHTML(wish.message)}"
+                    </p>
+                `;
+
+                if (prepend) {
+                    wishesWall.prepend(card);
+                } else {
+                    wishesWall.appendChild(card);
+                }
+            }
+
+            function updateWishesBadge() {
+                if (!wishesWall || !wishesBadge) return;
+                const total = wishesWall.children.length;
+                wishesBadge.textContent = `${total} ${total === 1 ? 'Wish' : 'Wishes'}`;
+            }
+
+            // Load previously saved wishes from localStorage
+            let savedWishes = [];
+            try {
+                const raw = localStorage.getItem(STORAGE_KEY);
+                if (raw) {
+                    savedWishes = JSON.parse(raw);
+                    savedWishes.forEach((w) => renderWishCard(w, true));
+                }
+            } catch (err) {
+                savedWishes = [];
+            }
+            updateWishesBadge();
+
+            if (rsvpForm) {
+                rsvpForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+
+                    const nameInput = document.getElementById('guest-name');
+                    const wishInput = document.getElementById('guest-wish');
+                    const selectedAttendance = document.querySelector('input[name="attendance"]:checked');
+
+                    const guestName = nameInput ? nameInput.value.trim() : '';
+                    const guestWish = wishInput ? wishInput.value.trim() : '';
+                    const attendanceVal = selectedAttendance ? selectedAttendance.value : 'Joyfully Accepts';
+                    const guestCountVal = countInput ? countInput.value : '1 Guest';
+
+                    if (!guestName || !guestWish) return;
+
+                    const newWish = {
+                        name: guestName,
+                        attendance: attendanceVal,
+                        guests: guestCountVal,
+                        message: guestWish,
+                        date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+                    };
+
+                    renderWishCard(newWish, true);
+                    updateWishesBadge();
+
+                    savedWishes.push(newWish);
+                    try {
+                        localStorage.setItem(STORAGE_KEY, JSON.stringify(savedWishes));
+                    } catch (err) {
+                        // Ignore storage quota errors in restricted environments
+                    }
+
+                    // Trigger celebratory burst of sparkles
+                    for (let i = 0; i < 8; i++) {
+                        setTimeout(createSparkle, i * 100);
+                    }
+
+                    // Reset form & show inline toast
+                    rsvpForm.reset();
+                    if (guestCountWrapper) guestCountWrapper.style.opacity = '1';
+                    if (countInput) countInput.disabled = false;
+                    if (rsvpToast) {
+                        rsvpToast.classList.remove('hidden');
+                        setTimeout(() => {
+                            rsvpToast.classList.add('hidden');
+                        }, 5000);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
