@@ -89,10 +89,41 @@
     </script>
 
     <style>
-        /* Custom Fairytale Sky-to-Meadow Kids Birthday Gradient */
+        /* Custom Fairytale Sleeping Beauty Gradient (Aurora Pink / Fairy Blue) */
         body {
             background: linear-gradient(180deg, #bae6fd 0%, #e0f2fe 22%, #fff0f6 52%, #ffe3ee 82%, #dcfce7 100%);
             overflow-x: hidden;
+            transition: background 0.6s ease;
+        }
+
+        body.theme-fairy-blue {
+            background: linear-gradient(180deg, #ffe3ee 0%, #e0f2fe 24%, #bae6fd 56%, #dbeafe 84%, #fef9c3 100%);
+        }
+
+        body.theme-fairy-blue .storybook-card {
+            box-shadow: 0 12px 0 rgba(125, 211, 252, 0.4), 0 20px 35px -5px rgba(14, 165, 233, 0.2);
+        }
+
+        body.theme-fairy-blue .tarpaulin-frame {
+            background: linear-gradient(135deg, #fde047 0%, #7dd3fc 50%, #38bdf8 100%);
+            box-shadow: 0 16px 0 rgba(14, 165, 233, 0.25), 0 25px 50px -12px rgba(14, 165, 233, 0.4);
+        }
+
+        .sleeping-beauty-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            max-width: 18rem;
+            margin: 0 auto;
+        }
+
+        .sleeping-beauty-divider::before,
+        .sleeping-beauty-divider::after {
+            content: '';
+            flex: 1;
+            height: 1.5px;
+            background: linear-gradient(90deg, transparent, rgba(234, 179, 8, 0.55), transparent);
         }
 
         .royal-text-shadow {
@@ -124,11 +155,13 @@
             backdrop-filter: blur(12px);
             border: 4px solid #ffffff;
             box-shadow: 0 12px 0 rgba(255, 154, 195, 0.35), 0 20px 35px -5px rgba(245, 46, 126, 0.18);
+            transition: box-shadow 0.5s ease, transform 0.3s ease;
         }
 
         .tarpaulin-frame {
             background: linear-gradient(135deg, #fde047 0%, #ff9ac3 50%, #7dd3fc 100%);
             box-shadow: 0 16px 0 rgba(214, 20, 96, 0.25), 0 25px 50px -12px rgba(245, 46, 126, 0.45);
+            transition: background 0.5s ease, box-shadow 0.5s ease;
         }
 
         /* Sparkle & Confetti Particle Container */
@@ -193,14 +226,22 @@
                     <a href="#party-fun" class="hover:text-princessPink-500 transition-colors">Party Fun</a>
                     <a href="#events" class="hover:text-princessPink-500 transition-colors">When & Where</a>
                     <a href="#godparents" class="hover:text-princessPink-500 transition-colors">Ninong & Ninang</a>
+                    <button type="button" class="fairy-theme-toggle px-3.5 py-2 rounded-full bg-skyMagic-100 hover:bg-skyMagic-200 text-skyMagic-600 text-xs font-bold border border-skyMagic-200 transition-all flex items-center space-x-1.5" title="Flora & Merryweather Magic: Switch Pink or Blue!">
+                        <span>🪄</span>
+                        <span class="fairy-theme-label">Make it Blue</span>
+                    </button>
                     <a href="#rsvp" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-princessPink-500 to-princessPink-400 text-white shadow-md hover:shadow-lg hover:from-princessPink-600 hover:to-princessPink-500 transition-all transform hover:-translate-y-0.5 border-2 border-white">
                         RSVP & Wishes
                     </a>
                 </div>
 
-                <!-- Mobile RSVP Quick Button -->
-                <div class="md:hidden">
-                    <a href="#rsvp" class="px-4 py-2 rounded-full bg-gradient-to-r from-princessPink-500 to-princessPink-400 text-white text-xs font-bold shadow-md border border-white">
+                <!-- Mobile Quick Actions -->
+                <div class="md:hidden flex items-center space-x-1.5">
+                    <button type="button" class="fairy-theme-toggle px-2.5 py-2 rounded-full bg-skyMagic-100 text-skyMagic-600 text-[11px] font-bold border border-skyMagic-200 flex items-center space-x-1" title="Make it Pink or Blue!">
+                        <span>🪄</span>
+                        <span class="fairy-theme-label">Blue</span>
+                    </button>
+                    <a href="#rsvp" class="px-3.5 py-2 rounded-full bg-gradient-to-r from-princessPink-500 to-princessPink-400 text-white text-xs font-bold shadow-md border border-white">
                         RSVP Now
                     </a>
                 </div>
@@ -220,9 +261,9 @@
         <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center">
             <!-- Playful Bunting / Crown Header -->
             <div class="inline-flex items-center space-x-2 px-5 py-2 rounded-full bg-white/95 text-princessPink-600 font-bold text-xs sm:text-sm shadow-md border-2 border-princessPink-200 mb-4 animate-float-slow">
+                <span>🌹</span>
+                <span class="uppercase tracking-wider">Once Upon A Dream... Our Little Princess Turns One!</span>
                 <span>👑</span>
-                <span class="uppercase tracking-wider">Once Upon A Time... A Little Princess Turned One!</span>
-                <span>✨</span>
             </div>
 
             <h1 class="font-script text-5xl sm:text-6xl md:text-7xl text-slate-800 leading-tight royal-text-shadow">
@@ -530,6 +571,15 @@
         </div>
     </section>
 
+    <!-- Subtle Sleeping Beauty Divider -->
+    <div class="py-2 px-4 relative z-10" aria-hidden="true">
+        <div class="sleeping-beauty-divider text-sm opacity-80">
+            <span>🌹</span>
+            <span>👑</span>
+            <span>🌹</span>
+        </div>
+    </div>
+
     <!-- EVENT DETAILS & SCHEDULE SECTION -->
     <section id="events" class="py-12 px-4 sm:px-6 relative z-10">
         <div class="max-w-5xl mx-auto">
@@ -622,20 +672,58 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Compact Sleeping Beauty Color Motif / Attire Swatches -->
+            <div class="mt-8 max-w-2xl mx-auto storybook-card rounded-3xl px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+                <div>
+                    <p class="text-xs font-bold uppercase tracking-widest text-princessPink-500">👗 Royal Attire Motif</p>
+                    <p class="text-xs sm:text-sm text-slate-600 mt-0.5">Sleeping Beauty Pastels • Smart Casual</p>
+                </div>
+                <div class="flex items-center justify-center gap-4">
+                    <div class="flex flex-col items-center">
+                        <span class="w-7 h-7 rounded-full border-2 border-white shadow-md" style="background-color: #ff9ac3;" title="Aurora Pink"></span>
+                        <span class="text-[10px] font-semibold text-slate-500 mt-1">Pink</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="w-7 h-7 rounded-full border-2 border-white shadow-md" style="background-color: #7dd3fc;" title="Fairy Blue"></span>
+                        <span class="text-[10px] font-semibold text-slate-500 mt-1">Blue</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="w-7 h-7 rounded-full border-2 border-white shadow-md" style="background-color: #fde047;" title="Royal Gold"></span>
+                        <span class="text-[10px] font-semibold text-slate-500 mt-1">Gold</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="w-7 h-7 rounded-full border-2 border-princessPink-100 shadow-md" style="background-color: #fffbeb;" title="Soft Ivory"></span>
+                        <span class="text-[10px] font-semibold text-slate-500 mt-1">Ivory</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+
+    <!-- Subtle Sleeping Beauty Divider -->
+    <div class="py-2 px-4 relative z-10" aria-hidden="true">
+        <div class="sleeping-beauty-divider text-sm opacity-80">
+            <span>✨</span>
+            <span>🌹</span>
+            <span>✨</span>
+        </div>
+    </div>
 
     <!-- BELOVED GODPARENTS (NINONG & NINANG) SECTION -->
     <section id="godparents" class="py-12 px-4 sm:px-6 relative z-10">
         <div class="max-w-4xl mx-auto storybook-card rounded-[2.5rem] p-8 sm:p-10 text-center">
             <span class="px-4 py-1 rounded-full bg-princessPink-100 text-princessPink-600 text-xs font-bold uppercase tracking-widest">
-                ✨ Special Guardians ✨
+                🧚‍♀️ Aurora's Good Fairies & Guardians 🧚‍♀️
             </span>
             <h2 class="font-script text-4xl sm:text-5xl text-princessPink-600 mt-2">
                 Beloved Ninongs & Ninangs
             </h2>
-            <p class="text-slate-600 mt-1 text-xs sm:text-sm">
-                Click any name below to customize Cristel Joy's Godparents list!
+            <p class="text-slate-600 max-w-lg mx-auto mt-1.5 text-xs sm:text-sm">
+                Like Aurora's Three Good Fairies, thank you for blessing Cristel Joy with love, joy, and grace.
+            </p>
+            <p class="text-slate-400 mt-1 text-[11px]">
+                (Click any name below to customize)
             </p>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8 text-left">
@@ -989,7 +1077,46 @@
                 });
             }
 
-            // Gentle Fairytale Music Box Melody using Tone.js
+            // 1C. Sleeping Beauty "Make It Pink! / Make It Blue!" Magic Wand Toggle
+            const fairyThemeButtons = Array.from(document.querySelectorAll('.fairy-theme-toggle'));
+            function launchFairyDust(isBlue) {
+                if (!sparklesContainer) return;
+                const dustIcons = isBlue ? ['✨', '💙', '⭐', '🪄'] : ['✨', '🩷', '🌹', '🪄'];
+                for (let i = 0; i < 16; i++) {
+                    setTimeout(() => {
+                        const dust = document.createElement('span');
+                        dust.classList.add('sparkle-item');
+                        dust.textContent = dustIcons[Math.floor(Math.random() * dustIcons.length)];
+                        dust.style.left = `${Math.random() * 100}vw`;
+                        dust.style.animationDuration = `${2.8 + Math.random() * 2.5}s`;
+                        dust.style.fontSize = `${14 + Math.random() * 12}px`;
+                        sparklesContainer.appendChild(dust);
+                        setTimeout(() => dust.remove(), 5500);
+                    }, i * 45);
+                }
+            }
+
+            fairyThemeButtons.forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    const isBlue = document.body.classList.toggle('theme-fairy-blue');
+                    fairyThemeButtons.forEach((b) => {
+                        const label = b.querySelector('.fairy-theme-label');
+                        const isCompact = b.closest('.md\\:hidden') !== null;
+                        if (isBlue) {
+                            b.classList.remove('bg-skyMagic-100', 'hover:bg-skyMagic-200', 'text-skyMagic-600', 'border-skyMagic-200');
+                            b.classList.add('bg-princessPink-100', 'hover:bg-princessPink-200', 'text-princessPink-600', 'border-princessPink-200');
+                            if (label) label.textContent = isCompact ? 'Pink' : 'Make it Pink';
+                        } else {
+                            b.classList.remove('bg-princessPink-100', 'hover:bg-princessPink-200', 'text-princessPink-600', 'border-princessPink-200');
+                            b.classList.add('bg-skyMagic-100', 'hover:bg-skyMagic-200', 'text-skyMagic-600', 'border-skyMagic-200');
+                            if (label) label.textContent = isCompact ? 'Blue' : 'Make it Blue';
+                        }
+                    });
+                    launchFairyDust(isBlue);
+                });
+            });
+
+            // Sleeping Beauty Waltz ("Once Upon a Dream") Music Box using Tone.js
             let isPlayingMusic = false;
             let musicLoop = null;
             let musicSynth = null;
@@ -1002,27 +1129,43 @@
                             await Tone.start();
                             if (!musicSynth) {
                                 musicSynth = new Tone.PolySynth(Tone.Synth, {
-                                    oscillator: { type: 'sine' },
-                                    envelope: { attack: 0.05, decay: 0.3, sustain: 0.2, release: 1.2 }
+                                    oscillator: { type: 'triangle' },
+                                    envelope: { attack: 0.04, decay: 0.35, sustain: 0.15, release: 1.6 }
                                 }).toDestination();
-                                musicSynth.volume.value = -10;
+                                musicSynth.volume.value = -11;
                             }
-                            const melody = [
-                                'C5', 'C5', 'D5', 'C5', 'F5', 'E5',
-                                'C5', 'C5', 'D5', 'C5', 'G5', 'F5',
-                                'C5', 'C5', 'C6', 'A5', 'F5', 'E5', 'D5',
-                                'Bb5', 'Bb5', 'A5', 'F5', 'G5', 'F5'
+                            Tone.Transport.bpm.value = 112;
+                            // Dreamy 3/4 Sleeping Beauty Waltz ("Once Upon a Dream") music-box phrase
+                            const waltzScore = [
+                                ['F4', 'A4'], 'C5', 'F5',
+                                ['A4', 'C5'], 'E5', 'D5',
+                                ['G4', 'Bb4'], 'C5', 'D5',
+                                ['G4', 'Bb4'], 'C5', 'A4',
+                                ['F4', 'A4'], 'C5', 'F5',
+                                ['A4', 'C5'], 'G5', 'F5',
+                                ['Bb4', 'D5'], 'E5', 'D5',
+                                ['C5', 'E5'], 'C5', null,
+                                ['A4', 'C5'], 'F5', 'E5',
+                                ['G4', 'Bb4'], 'D5', 'C5',
+                                ['F4', 'A4'], 'Bb4', 'A4',
+                                ['G4', 'C5'], 'A4', 'G4',
+                                ['F4', 'A4'], 'C5', 'F5',
+                                ['A4', 'D5'], 'E5', 'D5',
+                                ['G4', 'C5'], 'E5', 'D5',
+                                ['F4', 'A4', 'C5'], 'F5', null
                             ];
                             let step = 0;
                             musicLoop = new Tone.Loop((time) => {
-                                const note = melody[step % melody.length];
-                                musicSynth.triggerAttackRelease(note, '8n', time);
+                                const notes = waltzScore[step % waltzScore.length];
+                                if (notes) {
+                                    musicSynth.triggerAttackRelease(notes, '4n', time);
+                                }
                                 step++;
                             }, '4n').start(0);
                             Tone.Transport.start();
                             isPlayingMusic = true;
                             if (musicIcon) musicIcon.className = 'fa-solid fa-volume-high animate-pulse';
-                            if (musicLabel) musicLabel.textContent = 'Pause Music';
+                            if (musicLabel) musicLabel.textContent = 'Pause Waltz';
                         } else {
                             Tone.Transport.stop();
                             if (musicLoop) {
