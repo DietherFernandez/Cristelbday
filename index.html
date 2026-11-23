@@ -230,20 +230,14 @@
                         <span>🪄</span>
                         <span class="fairy-theme-label">Make it Blue</span>
                     </button>
-                    <a href="#rsvp" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-princessPink-500 to-princessPink-400 text-white shadow-md hover:shadow-lg hover:from-princessPink-600 hover:to-princessPink-500 transition-all transform hover:-translate-y-0.5 border-2 border-white">
-                        RSVP & Wishes
-                    </a>
                 </div>
 
-                <!-- Mobile Quick Actions -->
-                <div class="md:hidden flex items-center space-x-1.5">
-                    <button type="button" class="fairy-theme-toggle px-2.5 py-2 rounded-full bg-skyMagic-100 text-skyMagic-600 text-[11px] font-bold border border-skyMagic-200 flex items-center space-x-1" title="Make it Pink or Blue!">
+                <!-- Mobile Quick Action -->
+                <div class="md:hidden flex items-center">
+                    <button type="button" class="fairy-theme-toggle px-3.5 py-2 rounded-full bg-skyMagic-100 hover:bg-skyMagic-200 text-skyMagic-600 text-xs font-bold border border-skyMagic-200 flex items-center space-x-1.5" title="Make it Pink or Blue!">
                         <span>🪄</span>
-                        <span class="fairy-theme-label">Blue</span>
+                        <span class="fairy-theme-label">Make it Blue</span>
                     </button>
-                    <a href="#rsvp" class="px-3.5 py-2 rounded-full bg-gradient-to-r from-princessPink-500 to-princessPink-400 text-white text-xs font-bold shadow-md border border-white">
-                        RSVP Now
-                    </a>
                 </div>
             </div>
         </div>
@@ -1101,15 +1095,14 @@
                     const isBlue = document.body.classList.toggle('theme-fairy-blue');
                     fairyThemeButtons.forEach((b) => {
                         const label = b.querySelector('.fairy-theme-label');
-                        const isCompact = b.closest('.md\\:hidden') !== null;
                         if (isBlue) {
                             b.classList.remove('bg-skyMagic-100', 'hover:bg-skyMagic-200', 'text-skyMagic-600', 'border-skyMagic-200');
                             b.classList.add('bg-princessPink-100', 'hover:bg-princessPink-200', 'text-princessPink-600', 'border-princessPink-200');
-                            if (label) label.textContent = isCompact ? 'Pink' : 'Make it Pink';
+                            if (label) label.textContent = 'Make it Pink';
                         } else {
                             b.classList.remove('bg-princessPink-100', 'hover:bg-princessPink-200', 'text-princessPink-600', 'border-princessPink-200');
                             b.classList.add('bg-skyMagic-100', 'hover:bg-skyMagic-200', 'text-skyMagic-600', 'border-skyMagic-200');
-                            if (label) label.textContent = isCompact ? 'Blue' : 'Make it Blue';
+                            if (label) label.textContent = 'Make it Blue';
                         }
                     });
                     launchFairyDust(isBlue);
