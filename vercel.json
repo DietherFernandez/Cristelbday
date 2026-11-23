@@ -1,0 +1,16 @@
+{
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/happy-christening-and-1st-birthday",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/happy-christening-and-1st-birthday",
+      "destination": "/index.html"
+    }
+  ]
+}
