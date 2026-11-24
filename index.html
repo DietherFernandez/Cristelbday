@@ -172,7 +172,7 @@
             width: 100%;
             height: 100%;
             pointer-events: none;
-            z-index: 40;
+            z-index: 60;
             overflow: hidden;
         }
 
@@ -813,9 +813,17 @@
 
     <!-- 1ST BIRTHDAY CAKE POP-UP OVERLAY -->
     <div id="birthday-cake-popup" class="fixed inset-0 z-50 hidden bg-slate-900/55 backdrop-blur-sm flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Happy 1st Birthday Cake">
-        <div id="birthday-cake-card" class="storybook-card rounded-[2.25rem] px-7 py-6 sm:px-9 sm:py-7 max-w-xs w-full text-center relative overflow-hidden">
-            <div class="mx-auto w-44 h-44 flex items-center justify-center">
-                <svg class="w-40 h-40 drop-shadow-md" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <div id="birthday-cake-card" class="storybook-card rounded-[2.25rem] px-6 py-5 sm:px-8 sm:py-6 max-w-xs w-full text-center relative overflow-hidden">
+            <span class="inline-flex items-center space-x-1.5 px-3.5 py-1 rounded-full bg-princessPink-50 text-princessPink-600 text-[11px] font-bold uppercase tracking-widest border border-princessPink-200 mb-2">
+                <span>🎀</span>
+                <span>Turning One</span>
+                <span>🎀</span>
+            </span>
+
+            <div class="relative mx-auto w-52 h-44 flex items-center justify-center">
+                <!-- Soft Fairytale Pink-Gold Halo Glow -->
+                <div class="absolute w-36 h-36 rounded-full bg-gradient-to-tr from-princessPink-200/70 via-royalGold-100/80 to-skyMagic-100/70 blur-xl pointer-events-none" aria-hidden="true"></div>
+                <svg class="relative z-10 w-48 h-44 drop-shadow-md" viewBox="0 10 180 155" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <!-- Smoke Puff (appears when blown out) -->
                     <g id="cake-smoke-puff" class="smoke-puff">
                         <circle cx="90" cy="34" r="6" fill="#e2e8f0"/>
@@ -824,8 +832,8 @@
                     </g>
                     <!-- Flickering Candle Flame -->
                     <g id="cake-candle-flame" class="candle-flame">
-                        <path d="M90 16C96 25 99 31 99 36C99 41.2 95 45 90 45C85 45 81 41.2 81 36C81 31 84 25 90 16Z" fill="#fb923c"/>
-                        <path d="M90 23C93.5 29 95 33 95 36.5C95 39.5 92.8 42 90 42C87.2 42 85 39.5 85 36.5C85 33 86.5 29 90 23Z" fill="#fef08a"/>
+                        <path d="M90 14C96.5 23.5 100 30 100 35.5C100 41 95.5 45 90 45C84.5 45 80 41 80 35.5C80 30 83.5 23.5 90 14Z" fill="#fb923c"/>
+                        <path d="M90 22C93.8 28.5 95.5 32.5 95.5 36.2C95.5 39.4 93 42 90 42C87 42 84.5 39.4 84.5 36.2C84.5 32.5 86.2 28.5 90 22Z" fill="#fef08a"/>
                     </g>
                     <!-- Candle Wick -->
                     <line x1="90" y1="45" x2="90" y2="51" stroke="#78350f" stroke-width="2.2" stroke-linecap="round"/>
@@ -851,7 +859,7 @@
                     <ellipse cx="90" cy="154" rx="68" ry="8" fill="#bae6fd" stroke="#ffffff" stroke-width="2.5"/>
                 </svg>
             </div>
-            <p class="font-script text-3xl text-princessPink-600 leading-tight mt-1">
+            <p class="font-script text-4xl text-princessPink-600 leading-tight">
                 Happy 1st Birthday!
             </p>
             <p class="text-xs font-bold text-skyMagic-600 mt-1">
@@ -1189,9 +1197,9 @@
                     cakeBlowTimer = setTimeout(() => {
                         if (cakeCandleFlame) cakeCandleFlame.classList.add('blown-out');
                         if (cakeSmokePuff) cakeSmokePuff.classList.add('puff-active');
-                    }, 700);
+                    }, 1250);
 
-                    cakeCloseTimer = setTimeout(closeBirthdayCakePopup, 3800);
+                    cakeCloseTimer = setTimeout(closeBirthdayCakePopup, 4200);
                 });
             }
 
