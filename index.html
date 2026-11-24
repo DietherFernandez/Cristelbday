@@ -1177,6 +1177,7 @@
             if (celebrateBtn) {
                 celebrateBtn.addEventListener('click', () => {
                     launchConfettiBurst();
+                    startHappyBirthdayMusic();
                     if (!birthdayCakePopup) return;
                     if (cakeBlowTimer) clearTimeout(cakeBlowTimer);
                     if (cakeCloseTimer) clearTimeout(cakeCloseTimer);
@@ -1261,86 +1262,97 @@
                 });
             });
 
-            // Sleeping Beauty Waltz ("Once Upon a Dream") Music Box using Tone.js
+            // Classic "Happy Birthday to You" Music Box using Tone.js
             let isPlayingMusic = false;
             let musicLoop = null;
             let musicSynth = null;
 
+            async function startHappyBirthdayMusic() {
+                try {
+                    if (typeof Tone === 'undefined' || isPlayingMusic) return;
+                    await Tone.start();
+                    if (!musicSynth) {
+                        musicSynth = new Tone.PolySynth(Tone.Synth, {
+                            oscillator: { type: 'triangle' },
+                            envelope: { attack: 0.04, decay: 0.35, sustain: 0.15, release: 1.6 }
+                        }).toDestination();
+                        musicSynth.volume.value = -11;
+                    }
+                    Tone.Transport.bpm.value = 110;
+                    const beatSec = 60 / 110;
+                    const happyBirthdayNotes = [
+                        // Hap-py Birth-day to you
+                        { beat: 0.0,  notes: ['C5'], dur: '8n.' },
+                        { beat: 0.75, notes: ['C5'], dur: '16n' },
+                        { beat: 1.0,  notes: ['D5', 'F4', 'A4'], dur: '4n' },
+                        { beat: 2.0,  notes: ['C5'], dur: '4n' },
+                        { beat: 3.0,  notes: ['F5'], dur: '4n' },
+                        { beat: 4.0,  notes: ['E5', 'C4', 'G4'], dur: '2n' },
+
+                        // Hap-py Birth-day to you
+                        { beat: 6.0,  notes: ['C5'], dur: '8n.' },
+                        { beat: 6.75, notes: ['C5'], dur: '16n' },
+                        { beat: 7.0,  notes: ['D5', 'C4', 'G4'], dur: '4n' },
+                        { beat: 8.0,  notes: ['C5'], dur: '4n' },
+                        { beat: 9.0,  notes: ['G5'], dur: '4n' },
+                        { beat: 10.0, notes: ['F5', 'F4', 'A4'], dur: '2n' },
+
+                        // Hap-py Birth-day dear Cristel
+                        { beat: 12.0,  notes: ['C5'], dur: '8n.' },
+                        { beat: 12.75, notes: ['C5'], dur: '16n' },
+                        { beat: 13.0,  notes: ['C6', 'F4', 'A4'], dur: '4n' },
+                        { beat: 14.0,  notes: ['A5'], dur: '4n' },
+                        { beat: 15.0,  notes: ['F5'], dur: '4n' },
+                        { beat: 16.0,  notes: ['E5', 'Bb4', 'D5'], dur: '4n' },
+                        { beat: 17.0,  notes: ['D5'], dur: '2n' },
+
+                        // Hap-py Birth-day to you
+                        { beat: 19.0,  notes: ['Bb5'], dur: '8n.' },
+                        { beat: 19.75, notes: ['Bb5'], dur: '16n' },
+                        { beat: 20.0,  notes: ['A5', 'F4', 'C5'], dur: '4n' },
+                        { beat: 21.0,  notes: ['F5'], dur: '4n' },
+                        { beat: 22.0,  notes: ['G5', 'C4', 'E4'], dur: '4n' },
+                        { beat: 23.0,  notes: ['F5', 'F4', 'A4'], dur: '2n' }
+                    ];
+
+                    musicLoop = new Tone.Part((time, event) => {
+                        musicSynth.triggerAttackRelease(event.notes, event.dur, time);
+                    }, happyBirthdayNotes.map((n) => [n.beat * beatSec, n])).start(0);
+                    musicLoop.loop = true;
+                    musicLoop.loopEnd = 26 * beatSec;
+
+                    Tone.Transport.position = 0;
+                    Tone.Transport.start();
+                    isPlayingMusic = true;
+                    if (musicIcon) musicIcon.className = 'fa-solid fa-volume-high animate-pulse';
+                    if (musicLabel) musicLabel.textContent = 'Pause Music';
+                } catch (err) {
+                    // Ignore audio autoplay restrictions if blocked
+                }
+            }
+
+            function stopHappyBirthdayMusic() {
+                try {
+                    if (typeof Tone !== 'undefined') Tone.Transport.stop();
+                    if (musicLoop) {
+                        musicLoop.stop();
+                        musicLoop.dispose();
+                        musicLoop = null;
+                    }
+                    isPlayingMusic = false;
+                    if (musicIcon) musicIcon.className = 'fa-solid fa-music';
+                    if (musicLabel) musicLabel.textContent = 'Play Music Box';
+                } catch (err) {
+                    // Ignore audio stop errors
+                }
+            }
+
             if (musicToggleBtn) {
-                musicToggleBtn.addEventListener('click', async () => {
-                    try {
-                        if (typeof Tone === 'undefined') return;
-                        if (!isPlayingMusic) {
-                            await Tone.start();
-                            if (!musicSynth) {
-                                musicSynth = new Tone.PolySynth(Tone.Synth, {
-                                    oscillator: { type: 'triangle' },
-                                    envelope: { attack: 0.04, decay: 0.35, sustain: 0.15, release: 1.6 }
-                                }).toDestination();
-                                musicSynth.volume.value = -11;
-                            }
-                            Tone.Transport.bpm.value = 110;
-                            const beatSec = 60 / 110;
-                            // Classic "Happy Birthday to You" Music Box with exact dotted rhythm & gentle harmony
-                            const happyBirthdayNotes = [
-                                // Hap-py Birth-day to you
-                                { beat: 0.0,  notes: ['C5'], dur: '8n.' },
-                                { beat: 0.75, notes: ['C5'], dur: '16n' },
-                                { beat: 1.0,  notes: ['D5', 'F4', 'A4'], dur: '4n' },
-                                { beat: 2.0,  notes: ['C5'], dur: '4n' },
-                                { beat: 3.0,  notes: ['F5'], dur: '4n' },
-                                { beat: 4.0,  notes: ['E5', 'C4', 'G4'], dur: '2n' },
-
-                                // Hap-py Birth-day to you
-                                { beat: 6.0,  notes: ['C5'], dur: '8n.' },
-                                { beat: 6.75, notes: ['C5'], dur: '16n' },
-                                { beat: 7.0,  notes: ['D5', 'C4', 'G4'], dur: '4n' },
-                                { beat: 8.0,  notes: ['C5'], dur: '4n' },
-                                { beat: 9.0,  notes: ['G5'], dur: '4n' },
-                                { beat: 10.0, notes: ['F5', 'F4', 'A4'], dur: '2n' },
-
-                                // Hap-py Birth-day dear Cristel
-                                { beat: 12.0,  notes: ['C5'], dur: '8n.' },
-                                { beat: 12.75, notes: ['C5'], dur: '16n' },
-                                { beat: 13.0,  notes: ['C6', 'F4', 'A4'], dur: '4n' },
-                                { beat: 14.0,  notes: ['A5'], dur: '4n' },
-                                { beat: 15.0,  notes: ['F5'], dur: '4n' },
-                                { beat: 16.0,  notes: ['E5', 'Bb4', 'D5'], dur: '4n' },
-                                { beat: 17.0,  notes: ['D5'], dur: '2n' },
-
-                                // Hap-py Birth-day to you
-                                { beat: 19.0,  notes: ['Bb5'], dur: '8n.' },
-                                { beat: 19.75, notes: ['Bb5'], dur: '16n' },
-                                { beat: 20.0,  notes: ['A5', 'F4', 'C5'], dur: '4n' },
-                                { beat: 21.0,  notes: ['F5'], dur: '4n' },
-                                { beat: 22.0,  notes: ['G5', 'C4', 'E4'], dur: '4n' },
-                                { beat: 23.0,  notes: ['F5', 'F4', 'A4'], dur: '2n' }
-                            ];
-
-                            musicLoop = new Tone.Part((time, event) => {
-                                musicSynth.triggerAttackRelease(event.notes, event.dur, time);
-                            }, happyBirthdayNotes.map((n) => [n.beat * beatSec, n])).start(0);
-                            musicLoop.loop = true;
-                            musicLoop.loopEnd = 26 * beatSec;
-
-                            Tone.Transport.position = 0;
-                            Tone.Transport.start();
-                            isPlayingMusic = true;
-                            if (musicIcon) musicIcon.className = 'fa-solid fa-volume-high animate-pulse';
-                            if (musicLabel) musicLabel.textContent = 'Pause Music';
-                        } else {
-                            Tone.Transport.stop();
-                            if (musicLoop) {
-                                musicLoop.stop();
-                                musicLoop.dispose();
-                                musicLoop = null;
-                            }
-                            isPlayingMusic = false;
-                            if (musicIcon) musicIcon.className = 'fa-solid fa-music';
-                            if (musicLabel) musicLabel.textContent = 'Play Music Box';
-                        }
-                    } catch (err) {
-                        // Ignore audio autoplay restrictions if blocked
+                musicToggleBtn.addEventListener('click', () => {
+                    if (!isPlayingMusic) {
+                        startHappyBirthdayMusic();
+                    } else {
+                        stopHappyBirthdayMusic();
                     }
                 });
             }
